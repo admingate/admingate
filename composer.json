@@ -1,0 +1,87 @@
+{
+    "name": "admingate/admingate",
+    "description": "The Admingate Platform based on Laravel Framework.",
+    "keywords": [
+        "admingate",
+        "admingate cms",
+        "admingate admingate"
+    ],
+    "homepage": "https://admingate.com",
+    "support": {
+        "issues": "https://admingate.ticksy.com",
+        "document": "https://docs.admingate.com"
+    },
+    "authors": [
+        {
+            "name": "Admingate Technologies",
+            "email": "contact@admingate.com"
+        }
+    ],
+    "type": "project",
+    "require": {
+        "barryvdh/laravel-dompdf": "^2.0",
+        "admingate/assets": "^1.0",
+        "intervention/image": "^2.6",
+        "kris/laravel-form-builder": "dev-master",
+        "laravelcollective/html": "^6.2",
+        "xantios/mimey": "^2.2",
+        "tightenco/ziggy": "^1.4",
+        "yajra/laravel-datatables-buttons": "^9.1",
+        "yajra/laravel-datatables-oracle": "^10.2",
+        "guzzlehttp/guzzle": "^6.0|^7.0",
+        "mews/purifier": "^3.3",
+        "maatwebsite/excel": "^3.1",
+        "symfony/http-client": "^6.0",
+        "symfony/postmark-mailer": "^6.0",
+        "symfony/mailgun-mailer": "^6.0",
+        "twig/twig": "^3.0",
+        "doctrine/dbal": "^3.2",
+        "league/flysystem-aws-s3-v3": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Admingate\\Support\\": "support/src",
+            "Admingate\\ACL\\": "acl/src",
+            "Admingate\\Base\\": "base/src",
+            "Admingate\\Base\\Tests\\": "base/tests",
+            "Admingate\\Dashboard\\": "dashboard/src",
+            "Admingate\\Media\\": "media/src",
+            "Admingate\\Setting\\": "setting/src",
+            "Admingate\\Table\\": "table/src",
+            "Admingate\\JsValidation\\": "js-validation/src",
+            "Admingate\\Chart\\": "chart/src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Admingate\\Base\\Providers\\BaseServiceProvider",
+                "Admingate\\Base\\Providers\\CommandServiceProvider",
+                "Admingate\\Base\\Providers\\EventServiceProvider",
+                "Admingate\\Base\\Providers\\BreadcrumbsServiceProvider",
+                "Admingate\\Base\\Providers\\ComposerServiceProvider",
+                "Admingate\\Base\\Providers\\MailConfigServiceProvider",
+                "Admingate\\Base\\Providers\\FormServiceProvider",
+                "Admingate\\Support\\Providers\\SupportServiceProvider",
+                "Admingate\\Table\\Providers\\TableServiceProvider",
+                "Admingate\\ACL\\Providers\\AclServiceProvider",
+                "Admingate\\Dashboard\\Providers\\DashboardServiceProvider",
+                "Admingate\\Media\\Providers\\MediaServiceProvider",
+                "Admingate\\JsValidation\\Providers\\JsValidationServiceProvider",
+                "Admingate\\Chart\\Providers\\ChartServiceProvider"
+            ],
+            "aliases": {
+                "Assets": "Admingate\\Base\\Facades\\AssetsFacade",
+                "MetaBox": "Admingate\\Base\\Facades\\MetaBoxFacade",
+                "Action": "Admingate\\Base\\Facades\\ActionFacade",
+                "Filter": "Admingate\\Base\\Facades\\FilterFacade",
+                "EmailHandler": "Admingate\\Base\\Facades\\EmailHandlerFacade",
+                "Breadcrumbs": "Admingate\\Base\\Facades\\BreadcrumbsFacade",
+                "MacroableModels": "Admingate\\Base\\Facades\\MacroableModelsFacade",
+                "JsValidator": "Admingate\\JsValidation\\Facades\\JsValidatorFacade"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
